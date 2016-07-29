@@ -1,0 +1,25 @@
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+war {
+    baseName = 'web-admin'
+    version = '0.0.1-SNAPSHOT'
+}
+
+configurations {
+    providedRuntime
+}
+
+
+dependencies {
+    compile project(':api'), project(':core')
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile('org.springframework.boot:spring-boot-starter-validation')
+    compile("org.sitemesh:sitemesh:3.0.1")
+    compile("javax.servlet:jstl:1.2")
+    compile("org.apache.tiles:tiles-jsp:3.0.4")
+//    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+//    compile('javax.servlet:javax.servlet-api:3.0.1')
+    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
