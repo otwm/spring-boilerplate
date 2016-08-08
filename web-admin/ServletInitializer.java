@@ -3,10 +3,8 @@ package com.kdo.boot;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
@@ -19,7 +17,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 	 *
 	 * @return
 	 */
-	@Bean
+//	@Bean
 	public FilterRegistrationBean siteMeshFilter() {
 		FilterRegistrationBean filter = new FilterRegistrationBean();
 		filter.setFilter(new SiteMeshConfigFilter()); //sitemesh filter 등록

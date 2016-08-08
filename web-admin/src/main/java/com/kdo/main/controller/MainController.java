@@ -17,6 +17,6 @@ public class MainController {
     @RequestMapping(value = {"/", ""})
     String home() {
         System.out.print("123");
-        return "home";
+        return "site.homepage";
     }
 }
